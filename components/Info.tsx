@@ -6,7 +6,7 @@ export default function Info() {
   return (
     <section id="info" className="info">
       <div className="wrap">
-        <div className="dsp info__ghost slide" aria-hidden="true">Te esperamos · Te esperamos</div>
+        <div className="dsp info__ghost slide" aria-hidden="true">Te esperamos<span className="hide-m"> · Te esperamos</span></div>
         <h2 className="dsp info__title rvL">Agendá la fecha</h2>
 
         <div className="tiles-grid">

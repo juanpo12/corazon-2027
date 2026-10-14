@@ -181,7 +181,7 @@ a:hover { color: var(--cream); }
 .tl__big { font-size: clamp(96px, 12vw, 168px); margin-top: 20px; }
 .tl__mid { font-size: clamp(56px, 6.5vw, 96px); margin-top: 20px; }
 .tl__addr { line-height: 1.04; }
-.tl__buy { font-size: clamp(48px, 5.2vw, 78px); }
+.tl__buy { font-size: clamp(48px, 5.2vw, 78px); line-height: .96; }
 .tl__sub { font-size: 18px; letter-spacing: .14em; margin-top: 14px; }
 .tl__foot { margin-top: auto; padding-top: 28px; }
 .tl__share { position: relative; }
@@ -247,6 +247,10 @@ a:hover { color: var(--cream); }
   .band { grid-template-columns: 1fr; text-align: center; gap: 14px; }
   .band > div, .band__side--r { justify-self: center; text-align: center; }
   .tl { padding: 28px; }
+  /* "Te esperamos" entra completo en el ancho, sin deslizarse ni pisar el título */
+  .info { padding-top: 72px; }
+  .info__ghost { font-size: 16.5vw; margin-bottom: 4px; -webkit-text-stroke-width: 1.5px; animation: none !important; transform: none; }
+  .info__title { font-size: 12.5vw; white-space: nowrap; margin-bottom: 32px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
