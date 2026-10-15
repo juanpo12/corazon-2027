@@ -1,3 +1,5 @@
+@font-face { font-family: 'Brittany Signature'; src: url('/fonts/BrittanySignature.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+
 :root {
   --blue: #95B8F6;
   --coral: #FA5F49;
@@ -9,7 +11,7 @@
   --ink: #6D6D6F; /* gris de la paleta: reemplaza al negro en textos */
   --display: 'Anton', Impact, sans-serif;
   --sans: 'Montserrat', system-ui, sans-serif;
-  --script: 'Mrs Saint Delafield', cursive;
+  --script: 'Brittany Signature', 'Mrs Saint Delafield', cursive;
   --gutter: clamp(20px, 4vw, 56px);
 }
 
