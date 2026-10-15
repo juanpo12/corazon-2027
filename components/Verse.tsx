@@ -5,7 +5,7 @@ export default function Verse() {
   return (
     <section className="verse-sec">
       <div className="wrap wrap--narrow">
-        <div className="lbl verse-ref rvL">El lema · {VERSE.ref}</div>
+        <div className="lbl verse-ref rvL">{VERSE.ref}</div>
         <p className="verse">
           {words.map((w, i) => (
             <span key={i} className={`vw b${Math.min(11, Math.floor((i * 12) / words.length))}`}>
