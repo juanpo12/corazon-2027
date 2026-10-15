@@ -31,7 +31,6 @@ export default function Info() {
             <div className="lbl tl__k">Entradas</div>
             <div className="tl__share">
               <div className="dsp tl__mid tl__buy">Comprá tu<br />entrada</div>
-              <div className="scr tl__scr">de corazón</div>
             </div>
             <div className="tl__foot">
               <a className="cta" href={tickets} {...(EVENT.registrationUrl ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>

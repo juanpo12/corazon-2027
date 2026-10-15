@@ -185,7 +185,6 @@ a:hover { color: var(--cream); }
 .tl__sub { font-size: 18px; letter-spacing: .14em; margin-top: 14px; }
 .tl__foot { margin-top: auto; padding-top: 28px; }
 .tl__share { position: relative; }
-.tl__scr { font-size: clamp(54px, 6vw, 80px); color: var(--coral); margin-top: -10px; transform: rotate(-5deg); transform-origin: left; }
 .tl--cd { background: var(--blue); margin-top: 20px; padding: clamp(28px, 4vw, 56px); }
 .cd-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
 .cd-title { font-size: clamp(40px, 4.5vw, 64px); color: var(--cream); margin-top: 12px; }
