@@ -69,7 +69,7 @@ export const SPEAKERS: Speaker[] = [
   {
     first: 'German', last: 'Ponce', role: 'Pastor',
     card: '#ADD5FA', spot: '#F9D99A', ink: '#6D6D6F',
-    photo: { src: '/img/ponce-photo.webp', w: 766, h: 900 },
+    photo: { src: '/img/ponce-photo-2026.webp', w: 646, h: 900 },
     nameImg: { src: '/img/ponce-name.webp', w: 1666, h: 686 },
   },
 ];
