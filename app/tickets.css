@@ -62,6 +62,8 @@
 .ct-order__mail { font-size: 13px; opacity: .75; margin-top: 2px; word-break: break-all; }
 .ct-order__tks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .ct-pill { min-height: 40px; padding: 0 14px; border-radius: 999px; border: 0; font: 800 12px var(--sans); letter-spacing: .08em; cursor: pointer; background: var(--cream); color: #2B2B2D; }
+.ct-pill--ghost { background: transparent; color: var(--cream); border: 2px solid rgba(254,247,236,.5); }
+.ct-order__more { margin-top: 10px; }
 .ct-pill:disabled { background: rgba(255,255,255,.18); color: var(--cream); cursor: default; }
 
 /* panel */

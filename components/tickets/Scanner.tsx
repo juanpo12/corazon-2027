@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type QrScannerType from 'qr-scanner';
+import ResendButton from './ResendButton';
 
 type Res =
   | { result: 'ok' | 'already'; name: string; seq: number; of: number; at: string }
@@ -187,6 +188,9 @@ function Search({ onCheck }: { onCheck: (qr: string) => Promise<Res | void> }) {
                 {t.inToday ? `${t.seq}/${o.quantity} ingresó ${hour(t.inToday)}` : `Ingresar ${t.seq}/${o.quantity}`}
               </button>
             ))}
+          </div>
+          <div className="ct-order__more">
+            <ResendButton orderId={o.id} label="Reenviar mail" />
           </div>
         </div>
       ))}
