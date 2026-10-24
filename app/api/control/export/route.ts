@@ -7,8 +7,8 @@ export const runtime = 'nodejs';
 export async function GET() {
   if (!(await isControl())) return new Response('No autorizado', { status: 401 });
   const { data, error } = await db()
-    .from('orders')
-    .select('buyer_name, email, quantity, total, status, paid_at, mp_payment_id, tickets(seq, checkins(day, at))')
+    .from('cac_orders')
+    .select('buyer_name, email, quantity, total, status, paid_at, mp_payment_id, tickets:cac_tickets(seq, checkins:cac_checkins(day, at))')
     .in('status', ['paid', 'refunded'])
     .order('paid_at');
   if (error) return new Response('Error', { status: 500 });

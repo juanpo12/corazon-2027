@@ -72,7 +72,7 @@ Vercel → el proyecto → **Settings → Environment Variables**. Cargarlas y d
 - Si a alguien no le carga el QR: pestaña **Buscar** → nombre o email → **Ingresar**.
 
 ## Archivos
-- `supabase/schema.sql`: tablas (`orders`, `tickets`, `checkins`) y función `mark_order_paid`.
+- `supabase/schema.sql`: tablas (`cac_orders`, `cac_tickets`, `cac_checkins`) y función `cac_mark_order_paid`.
 - `lib/server/*`: Mercado Pago, base de datos, mails, sesión del control, ingresos.
 - `app/api/*`: checkout, webhook, imagen QR, control (login, checkin, search, export, resend).
 - `app/entradas`, `app/mis-entradas`, `app/control`: pantallas.

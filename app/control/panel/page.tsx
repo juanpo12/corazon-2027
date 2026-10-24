@@ -14,10 +14,10 @@ export default async function PanelPage() {
   if (!(await isControl())) redirect('/control');
 
   const [paid, todayIn, recent] = await Promise.all([
-    db().from('orders').select('quantity, total').eq('status', 'paid'),
-    db().from('checkins').select('id', { count: 'exact', head: true }).eq('day', today()),
+    db().from('cac_orders').select('quantity, total').eq('status', 'paid'),
+    db().from('cac_checkins').select('id', { count: 'exact', head: true }).eq('day', today()),
     db()
-      .from('orders')
+      .from('cac_orders')
       .select('id, buyer_name, email, quantity, total, status, mp_status, created_at, paid_at, email_sent_at')
       .order('created_at', { ascending: false })
       .limit(300),

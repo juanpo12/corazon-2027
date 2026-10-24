@@ -12,8 +12,8 @@ export async function GET(req: Request) {
   if (q.length < 3) return NextResponse.json({ orders: [] });
 
   const { data, error } = await db()
-    .from('orders')
-    .select('id, buyer_name, email, quantity, status, tickets(id, seq, code, checkins(day, at))')
+    .from('cac_orders')
+    .select('id, buyer_name, email, quantity, status, tickets:cac_tickets(id, seq, code, checkins:cac_checkins(day, at))')
     .eq('status', 'paid')
     .or(`buyer_name.ilike.%${q}%,email.ilike.%${q}%`)
     .order('buyer_name')

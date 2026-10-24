@@ -1,8 +1,9 @@
 -- Entradas Corazón a Corazón 2027
 -- Pegar todo este archivo en Supabase → SQL Editor → New query → Run.
 -- Se puede volver a correr sin romper nada.
+-- Todo lleva el prefijo cac_ para no chocar con otras tablas que ya existan en el proyecto.
 
-create table if not exists orders (
+create table if not exists cac_orders (
   id uuid primary key default gen_random_uuid(),
   -- clave secreta del link "Mis entradas" (solo la tiene el comprador)
   access_token text not null unique default replace(gen_random_uuid()::text, '-', ''),
@@ -21,12 +22,12 @@ create table if not exists orders (
   email_sent_at timestamptz
 );
 
-create index if not exists orders_status_idx on orders (status);
-create index if not exists orders_email_idx on orders (lower(email));
+create index if not exists cac_orders_status_idx on cac_orders (status);
+create index if not exists cac_orders_email_idx on cac_orders (lower(email));
 
-create table if not exists tickets (
+create table if not exists cac_tickets (
   id uuid primary key default gen_random_uuid(),
-  order_id uuid not null references orders (id) on delete cascade,
+  order_id uuid not null references cac_orders (id) on delete cascade,
   -- número de entrada dentro de la compra (1 de 4, 2 de 4…)
   seq int not null,
   -- lo que va dentro del QR: 128 bits aleatorios, imposible de adivinar
@@ -36,22 +37,22 @@ create table if not exists tickets (
 );
 
 -- Un ingreso por entrada por día (la entrada vale para todos los días del evento)
-create table if not exists checkins (
+create table if not exists cac_checkins (
   id bigint generated always as identity primary key,
-  ticket_id uuid not null references tickets (id) on delete cascade,
+  ticket_id uuid not null references cac_tickets (id) on delete cascade,
   day date not null,
   at timestamptz not null default now(),
   unique (ticket_id, day)
 );
 
 -- Nadie entra a las tablas desde el navegador: solo el servidor de la web, con la clave secreta.
-alter table orders enable row level security;
-alter table tickets enable row level security;
-alter table checkins enable row level security;
+alter table cac_orders enable row level security;
+alter table cac_tickets enable row level security;
+alter table cac_checkins enable row level security;
 
 -- Marca la compra como pagada y emite sus entradas en un solo paso.
 -- Devuelve true solo la primera vez (si Mercado Pago avisa dos veces, no se duplican entradas).
-create or replace function mark_order_paid(p_order uuid, p_payment text, p_mp_status text)
+create or replace function cac_mark_order_paid(p_order uuid, p_payment text, p_mp_status text)
 returns boolean
 language plpgsql
 security definer
@@ -60,7 +61,7 @@ as $$
 declare
   v_qty int;
 begin
-  update orders
+  update cac_orders
      set status = 'paid', mp_payment_id = p_payment, mp_status = p_mp_status, paid_at = now()
    where id = p_order and status = 'pending'
   returning quantity into v_qty;
@@ -69,12 +70,12 @@ begin
     return false;
   end if;
 
-  insert into tickets (order_id, seq)
+  insert into cac_tickets (order_id, seq)
   select p_order, g from generate_series(1, v_qty) g;
 
   return true;
 end;
 $$;
 
-revoke all on function mark_order_paid(uuid, text, text) from public, anon, authenticated;
-grant execute on function mark_order_paid(uuid, text, text) to service_role;
+revoke all on function cac_mark_order_paid(uuid, text, text) from public, anon, authenticated;
+grant execute on function cac_mark_order_paid(uuid, text, text) to service_role;

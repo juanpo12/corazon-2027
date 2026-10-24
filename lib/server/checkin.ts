@@ -13,8 +13,8 @@ export const today = () =>
 
 export async function checkIn(code: string): Promise<CheckinResult> {
   const { data: t, error } = await db()
-    .from('tickets')
-    .select('id, seq, orders!inner(buyer_name, quantity, status)')
+    .from('cac_tickets')
+    .select('id, seq, orders:cac_orders!inner(buyer_name, quantity, status)')
     .eq('code', code)
     .maybeSingle();
   if (error) throw error;
@@ -25,10 +25,10 @@ export async function checkIn(code: string): Promise<CheckinResult> {
   if (o.status !== 'paid') return { result: 'revoked', ...who };
 
   const day = today();
-  const ins = await db().from('checkins').insert({ ticket_id: t.id, day }).select('at').single();
+  const ins = await db().from('cac_checkins').insert({ ticket_id: t.id, day }).select('at').single();
   if (!ins.error) return { result: 'ok', ...who, at: ins.data.at };
   if (ins.error.code !== '23505') throw ins.error; // 23505 = ya existe ingreso para hoy
 
-  const { data: prev } = await db().from('checkins').select('at').eq('ticket_id', t.id).eq('day', day).single();
+  const { data: prev } = await db().from('cac_checkins').select('at').eq('ticket_id', t.id).eq('day', day).single();
   return { result: 'already', ...who, at: prev?.at ?? '' };
 }

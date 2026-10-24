@@ -21,7 +21,7 @@ export async function POST(req: Request) {
 
   try {
     const { data: order, error } = await db()
-      .from('orders')
+      .from('cac_orders')
       .insert({ buyer_name: name, email, quantity, unit_price: TICKET.price, total: TICKET.price * quantity })
       .select('id, access_token')
       .single();
@@ -52,7 +52,7 @@ export async function POST(req: Request) {
       order.id,
     );
 
-    await db().from('orders').update({ mp_preference_id: pref.id }).eq('id', order.id);
+    await db().from('cac_orders').update({ mp_preference_id: pref.id }).eq('id', order.id);
     return NextResponse.json({ url: pref.init_point });
   } catch (e) {
     console.error('checkout', e);
