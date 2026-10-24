@@ -1,6 +1,6 @@
 # Corazón a Corazón 2027 — Web de la conferencia
 
-Next.js 15 (App Router) + React 19. Página estática, sin backend.
+Next.js 15 (App Router) + React 19. La web es estática; la venta de entradas usa Mercado Pago + Supabase + Resend (ver [ENTRADAS.md](ENTRADAS.md)).
 
 ## Desarrollo
 
@@ -21,7 +21,7 @@ npm start
 
 ## Pendientes
 
-- `registrationUrl` en `lib/event.ts`: link de venta de entradas. Con link, "Quiero ir" y "Comprar entrada" llevan ahí; vacío, bajan a la sección Info.
+- Venta de entradas: configurar Supabase, Resend, Mercado Pago y las variables de Vercel según [ENTRADAS.md](ENTRADAS.md). "Quiero ir" y "Comprar entrada" llevan a `/entradas` (`registrationUrl` en `lib/event.ts`).
 - `startsAt`: ajustar la hora real de inicio.
 - `NEXT_PUBLIC_SITE_URL` en el hosting (ej. `https://tudominio.com`) para que la vista previa al compartir use el dominio correcto.
 

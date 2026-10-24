@@ -9,9 +9,19 @@ export const EVENT = {
   city: 'San Juan',
   country: 'Argentina',
   ministry: 'Ministerio Cristo la Solución',
-  // Pegar acá el link de venta de entradas cuando exista; mientras tanto los botones llevan a #info.
-  registrationUrl: '' as string,
+  // A dónde llevan "Quiero ir" y "Comprar entrada". '/entradas' es la venta propia con Mercado Pago.
+  registrationUrl: '/entradas' as string,
 };
+
+// Venta de entradas: una sola entrada, válida para todos los días, sin cupo.
+export const TICKET = {
+  title: 'Entrada Corazón a Corazón 2027',
+  price: 50000, // en pesos argentinos
+  maxPerOrder: 10,
+};
+
+export const formatARS = (n: number) =>
+  new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 }).format(n);
 
 export const MAPS_URL =
   'https://www.google.com/maps/search/?api=1&query=' +

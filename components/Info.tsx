@@ -33,7 +33,7 @@ export default function Info() {
               <div className="dsp tl__mid tl__buy">Comprá tu<br />entrada</div>
             </div>
             <div className="tl__foot">
-              <a className="cta" href={tickets} {...(EVENT.registrationUrl ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+              <a className="cta" href={tickets} {...(/^https?:/.test(EVENT.registrationUrl) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
                 Comprar entrada <span aria-hidden="true">→</span>
               </a>
             </div>
