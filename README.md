@@ -23,7 +23,7 @@ npm start
 
 - Venta de entradas: configurar Supabase, Resend, Mercado Pago y las variables de Vercel según [ENTRADAS.md](ENTRADAS.md). "Quiero ir" y "Comprar entrada" llevan a `/entradas` (`registrationUrl` en `lib/event.ts`).
 - `startsAt`: ajustar la hora real de inicio.
-- `NEXT_PUBLIC_SITE_URL` en el hosting (ej. `https://tudominio.com`) para que la vista previa al compartir use el dominio correcto.
+- `NEXT_PUBLIC_SITE_URL` en el hosting (`https://www.conferenciadecorazonacorazon.com`) para que la vista previa al compartir use el dominio correcto.
 
 ## Deploy
 

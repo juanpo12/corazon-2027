@@ -8,7 +8,7 @@ import '@fontsource/mrs-saint-delafield/400.css';
 import './globals.css';
 
 export const metadata: Metadata = {
-  // Definir NEXT_PUBLIC_SITE_URL con el dominio final (ej. https://corazon.cls.org.ar)
+  // Definir NEXT_PUBLIC_SITE_URL con el dominio final (https://www.conferenciadecorazonacorazon.com)
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: 'Corazón a Corazón 2027 · Conferencia CLS San Juan',
   description:

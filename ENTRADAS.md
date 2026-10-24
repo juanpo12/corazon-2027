@@ -35,7 +35,7 @@ Una sola entrada de **$ 50.000**, válida para todos los días, sin cupo. Se cam
 Seguir la guía para el pastor. Hacen falta: Access Token de **prueba**, Access Token de **producción** y la **clave secreta** del webhook.
 
 Webhook (en Tus integraciones → la aplicación → Webhooks → Configurar notificaciones):
-- URL: `https://DOMINIO/api/mp/webhook`, en modo de prueba y en modo productivo.
+- URL: `https://www.conferenciadecorazonacorazon.com/api/mp/webhook`, en modo de prueba y en modo productivo.
 - Evento: **Pagos**.
 
 ### 4. Variables en Vercel
@@ -43,7 +43,7 @@ Vercel → el proyecto → **Settings → Environment Variables**. Cargarlas y d
 
 | Variable | Valor |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | `https://dominio-final.com`, sin `/` al final |
+| `NEXT_PUBLIC_SITE_URL` | `https://www.conferenciadecorazonacorazon.com`, sin `/` al final |
 | `MP_ACCESS_TOKEN` | Access Token de Mercado Pago. Primero el de **prueba**; para vender, el de **producción** |
 | `MP_WEBHOOK_SECRET` | Clave secreta del webhook de Mercado Pago |
 | `SUPABASE_URL` | Project URL de Supabase |
@@ -67,7 +67,7 @@ Vercel → el proyecto → **Settings → Environment Variables**. Cargarlas y d
 4. Cambiar `MP_ACCESS_TOKEN` al de **producción**, hacer Redeploy y hacer una compra real chica para confirmar.
 
 ## El día del evento
-- Cada persona de la puerta abre `https://DOMINIO/control` en su celular, pone la clave y da permiso a la cámara. Pueden ser varios celulares a la vez.
+- Cada persona de la puerta abre `https://www.conferenciadecorazonacorazon.com/control` en su celular, pone la clave y da permiso a la cámara. Pueden ser varios celulares a la vez.
 - Hace falta internet en la puerta (datos o wifi).
 - Si a alguien no le carga el QR: pestaña **Buscar** → nombre o email → **Ingresar**.
 
