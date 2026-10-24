@@ -65,11 +65,6 @@ export default function Speakers() {
               aria-hidden={i !== active}
             >
               <div className="spot-txt">
-                <div className="spot-meta lbl spot-count">
-                  <span>{String(i + 1).padStart(2, '0')} / {String(n).padStart(2, '0')}</span>
-                  <span className="spot-line" />
-                  <span>{s.role}</span>
-                </div>
                 {s.nameImg ? (
                   <Image className="spot-name" src={s.nameImg.src} alt={`${s.first} ${s.last}`} width={s.nameImg.w} height={s.nameImg.h} sizes="(max-width: 900px) 90vw, 600px" />
                 ) : (
