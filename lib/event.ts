@@ -31,9 +31,9 @@ export const VERSE = {
   ref: '2 Corintios 3:18',
   // Explicación del lema: un párrafo por elemento
   about: [
-    'Cristo le dio fin al velo que nos separaba y, sentados a sus pies, nos miramos como en espejo, a la luz de su palabra, fiel reflejo de su amor y resplandor de su eterna gracia.',
-    'Tenemos su palabra y su poder en nuestros corazones: el momento llegó.',
-    'Se vuelve a abrir la puerta para ser llevados a un nuevo tiempo; la primera gloria pasó y ha llegado la postrera.',
+    // Aniversario: 35 años de la iglesia
+    'Hace 35 años, nuestros pastores Alfredo y Celina Dimiro fundaron la Iglesia Cristo La Solución en la ciudad de San Justo.  Hace 35 años comenzó una historia de fe, obediencia y fidelidad a Dios.  35 años siendo testigos de Su fidelidad.  35 años siendo formados por Su Palabra.  35 años orando juntos, creciendo juntos y edificando la iglesia local.  35 años compartiendo el Evangelio en nuestra ciudad, amando a las personas y alcanzando a los necesitados.  35 años creyendo, sirviendo y caminando juntos como familia de la fe.  35 años viendo la gloria de Dios en medio nuestro.  Y aunque celebramos con gratitud todo lo que Dios ha hecho, nuestra mirada sigue puesta en lo que viene. Porque todavía hay más por conocer de Su presencia, más por experimentar de Su poder y más por hacer para Su gloria.  35 años de fidelidad.  35 años de gloria.',
+    'Y todavía creemos que hay más.',
   ],
   closing: 'De corazón a corazón',
   closingScript: 'de gloria en gloria',
