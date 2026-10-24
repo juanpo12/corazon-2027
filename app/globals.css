@@ -82,6 +82,9 @@ a:hover { color: var(--cream); }
 .nl::after { content: ""; position: absolute; left: 4px; right: 4px; bottom: 8px; height: 2px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .35s cubic-bezier(.2,.8,.2,1); }
 .nl:hover { color: var(--ink); }
 .nl:hover::after { transform: scaleX(1); }
+.nl--btn { padding: 10px 18px; border-radius: 999px; background: var(--coral); box-shadow: 0 4px 0 var(--ink); transition: transform .3s cubic-bezier(.3,1.5,.5,1), background .3s, box-shadow .3s; }
+.nl--btn::after { display: none; }
+.nl--btn:hover { background: var(--cream); transform: translateY(-2px); box-shadow: 0 6px 0 var(--ink); }
 
 .lockup-wrap { position: relative; z-index: 2; display: flex; justify-content: center; padding: clamp(24px, 6vw, 60px) 16px 0; }
 .lockup { position: relative; width: min(1060px, 100%); aspect-ratio: 1210 / 664; }
