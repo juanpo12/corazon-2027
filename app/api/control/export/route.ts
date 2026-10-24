@@ -14,7 +14,7 @@ export async function GET() {
   if (error) return new Response('Error', { status: 500 });
 
   const fmt = (iso: string | null) =>
-    iso ? new Date(iso).toLocaleString('es-AR', { timeZone: 'America/Argentina/San_Juan' }) : '';
+    iso ? new Date(iso).toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' }) : '';
   const cell = (v: unknown) => `"${String(v ?? '').replace(/"/g, '""')}"`;
   const rows = [['Nombre', 'Email', 'Entrada', 'Estado', 'Pagado', 'Total compra', 'Pago MP', 'Ingresos']];
   for (const o of data ?? []) {

@@ -6,7 +6,8 @@ export const EVENT = {
   // Inicio para la cuenta regresiva (hora de Argentina). Ajustar cuando se confirme el horario.
   startsAt: '2027-02-08T00:00:00-03:00',
   address: 'J. M. Rosas 4357',
-  city: 'San Juan',
+  city: 'San Justo',
+  province: 'Buenos Aires',
   country: 'Argentina',
   ministry: 'Ministerio Cristo la Solución',
   // A dónde llevan "Quiero ir" y "Comprar entrada". '/entradas' es la venta propia con Mercado Pago.
@@ -25,7 +26,7 @@ export const formatARS = (n: number) =>
 
 export const MAPS_URL =
   'https://www.google.com/maps/search/?api=1&query=' +
-  encodeURIComponent(`${EVENT.address}, ${EVENT.city}, ${EVENT.country}`);
+  encodeURIComponent(`${EVENT.address}, ${EVENT.city}, ${EVENT.province}, ${EVENT.country}`);
 
 export const VERSE = {
   ref: '2 Corintios 3:18',

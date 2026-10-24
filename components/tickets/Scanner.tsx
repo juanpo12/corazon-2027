@@ -12,7 +12,7 @@ type Res =
 
 type Found = { id: string; name: string; email: string; quantity: number; tickets: { seq: number; code: string; inToday: string | null }[] };
 
-const hour = (iso: string) => new Date(iso).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/San_Juan' });
+const hour = (iso: string) => new Date(iso).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires' });
 
 export default function Scanner() {
   const [tab, setTab] = useState<'scan' | 'search'>('scan');

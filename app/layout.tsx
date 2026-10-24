@@ -10,12 +10,12 @@ import './globals.css';
 export const metadata: Metadata = {
   // Definir NEXT_PUBLIC_SITE_URL con el dominio final (https://www.conferenciadecorazonacorazon.com)
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
-  title: 'Corazón a Corazón 2027 · Conferencia CLS San Juan',
+  title: 'Corazón a Corazón 2027 · Conferencia CLS San Justo',
   description:
-    'Conferencia Corazón a Corazón 2027 — De gloria en gloria. 8 y 9 de febrero en J. M. Rosas 4357, San Juan. Con Juan Crudo, Sergio Belart, Marco Barrientos, Eddie Nunes y German Ponce.',
+    'Conferencia Corazón a Corazón 2027 — De gloria en gloria. 8 y 9 de febrero en J. M. Rosas 4357, San Justo. Con Juan Crudo, Sergio Belart, Marco Barrientos, Eddie Nunes y German Ponce.',
   openGraph: {
     title: 'Corazón a Corazón 2027',
-    description: 'De gloria en gloria · 8 y 9 de febrero · San Juan',
+    description: 'De gloria en gloria · 8 y 9 de febrero · San Justo',
     locale: 'es_AR',
     type: 'website',
   },

@@ -1,7 +1,7 @@
 import { SPEAKERS } from '@/lib/event';
 
 const TOP = ['Corazón a corazón', 'De gloria en gloria', 'Conferencia 2027', '8 y 9 de febrero'];
-const BOTTOM = ['San Juan', 'Cristo la Solución', SPEAKERS.map((s) => `${s.first} ${s.last}`).join(' · ')];
+const BOTTOM = ['San Justo', 'Cristo la Solución', SPEAKERS.map((s) => `${s.first} ${s.last}`).join(' · ')];
 
 function Row({ items, small }: { items: string[]; small?: boolean }) {
   return (

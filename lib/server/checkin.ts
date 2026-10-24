@@ -7,9 +7,9 @@ export type CheckinResult =
   | { result: 'revoked'; name: string; seq: number; of: number }
   | { result: 'invalid' };
 
-// Día del evento según la hora de San Juan (cada entrada tiene un ingreso por día)
+// Día del evento según la hora de Argentina (cada entrada tiene un ingreso por día)
 export const today = () =>
-  new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Argentina/San_Juan' }).format(new Date());
+  new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Argentina/Buenos_Aires' }).format(new Date());
 
 export async function checkIn(code: string): Promise<CheckinResult> {
   const { data: t, error } = await db()

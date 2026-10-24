@@ -14,7 +14,7 @@ Una sola entrada de **$ 50.000**, válida para todos los días, sin cupo. Se cam
    - naranja **Ya ingresó hoy** (con la hora),
    - rojo **QR no válido** o **Entrada anulada**.
 
-   Cada entrada tiene **un ingreso por día** (hora de San Juan). Pestaña **Buscar**: por nombre o email, para cuando a alguien no le carga el QR.
+   Cada entrada tiene **un ingreso por día** (hora de Argentina). Pestaña **Buscar**: por nombre o email, para cuando a alguien no le carga el QR.
 7. `/control/panel`: entradas vendidas, recaudado, ingresos de hoy, lista de compras, **Reenviar** mail y **Descargar Excel**.
 
 ## Puesta en marcha (una sola vez)

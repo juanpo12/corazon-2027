@@ -26,7 +26,7 @@ export default async function PanelPage() {
   const rows = paid.data ?? [];
   const sold = rows.reduce((a, o) => a + o.quantity, 0);
   const money = rows.reduce((a, o) => a + Number(o.total), 0);
-  const fmt = (iso: string) => new Date(iso).toLocaleString('es-AR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/San_Juan' });
+  const fmt = (iso: string) => new Date(iso).toLocaleString('es-AR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires' });
   const label = (o: { status: string; mp_status: string | null }) =>
     o.status === 'paid' ? 'Pagada' : o.status === 'refunded' ? 'Devuelta' : o.mp_status === 'pending' || o.mp_status === 'in_process' ? 'Pago pendiente' : 'Sin pagar';
 
