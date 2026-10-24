@@ -1,6 +1,6 @@
 # Venta de entradas (Mercado Pago + Supabase + Resend)
 
-Una sola entrada de **$ 50.000**, válida para todos los días, sin cupo. Se cambia en `lib/event.ts` (`TICKET`).
+Una sola entrada de **$ 55.000**, válida para todos los días, sin cupo. Se cambia en `lib/event.ts` (`TICKET`).
 
 ## Cómo funciona
 

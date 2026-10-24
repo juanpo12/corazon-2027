@@ -17,7 +17,7 @@ export const EVENT = {
 // Venta de entradas: una sola entrada, válida para todos los días, sin cupo.
 export const TICKET = {
   title: 'Entrada Corazón a Corazón 2027',
-  price: 50000, // en pesos argentinos
+  price: 55000, // en pesos argentinos
   maxPerOrder: 10,
 };
 
