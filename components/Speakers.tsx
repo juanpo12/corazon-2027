@@ -73,6 +73,7 @@ export default function Speakers() {
                     <div className="dsp spot-name__big">{s.last}</div>
                   </div>
                 )}
+                <p className="spot-meta spot-bio">{s.bio}</p>
                 <div className="spot-meta spot-nav">
                   <button className="arrow" type="button" aria-label="Orador anterior" tabIndex={i === active ? 0 : -1} onClick={() => pick((active + n - 1) % n)}>←</button>
                   <button className="arrow" type="button" aria-label="Orador siguiente" tabIndex={i === active ? 0 : -1} onClick={() => pick((active + 1) % n)}>→</button>

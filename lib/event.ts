@@ -44,6 +44,7 @@ export type Speaker = {
   first: string;
   last: string;
   role: string;
+  bio: string; // descripción debajo del nombre en el panel destacado
   card: string; // color de la columna
   spot: string; // fondo del panel destacado
   ink: string; // color de texto del panel
@@ -54,30 +55,35 @@ export type Speaker = {
 export const SPEAKERS: Speaker[] = [
   {
     first: 'Juan', last: 'Crudo', role: 'Apóstol',
+    bio: 'Líder del ministerio Cristo la Solución, en Buenos Aires, Argentina. Su labor pastoral está centrada en la enseñanza bíblica y el acompañamiento espiritual de la comunidad.',
     card: '#FA5F49', spot: '#FA5F49', ink: '#FEF7EC',
     photo: { src: '/img/crudo-photo.webp', w: 786, h: 837 },
     nameImg: { src: '/img/crudo-name.webp', w: 810, h: 559 },
   },
   {
     first: 'Sergio', last: 'Belart', role: 'Pastor',
+    bio: 'Pastor de la iglesia Cita con la Vida y autor de libros. Recientemente lanzó una nueva edición de su obra Se necesita un muchacho.',
     card: '#F9A59A', spot: '#95B8F6', ink: '#FEF7EC',
     photo: { src: '/img/belart-photo.webp', w: 540, h: 1000 },
     nameImg: { src: '/img/belart-name.webp', w: 931, h: 557 },
   },
   {
     first: 'Marco', last: 'Barrientos', role: 'Salmista',
+    bio: 'Pastor, cantante y referente de la música cristiana. A través de la adoración, la enseñanza y sus libros, ha desarrollado una reconocida trayectoria internacional.',
     card: '#F9D99A', spot: '#F9A59A', ink: '#6D6D6F',
     photo: { src: '/img/marco-photo.webp', w: 743, h: 894 },
     nameImg: { src: '/img/marco-name.webp', w: 956, h: 415 },
   },
   {
     first: 'Eddie', last: 'Nunes', role: 'Pastor',
+    bio: 'Pastor de Zion Church, en Lisboa, Portugal, y referente del movimiento Dunamis. Su labor se caracteriza por impulsar una generación apasionada por la presencia de Dios y el avivamiento.',
     card: '#E8A28F', spot: '#ADD5FA', ink: '#6D6D6F',
     photo: { src: '/img/nunes-photo.webp', w: 642, h: 874 },
     nameImg: { src: '/img/nunes-name.webp', w: 737, h: 480 },
   },
   {
     first: 'German', last: 'Ponce', role: 'Pastor',
+    bio: 'Líder de la iglesia Cristo Ebenezer, en Honduras. Su trayectoria se distingue por la predicación de la Palabra y su énfasis en la restauración espiritual.',
     card: '#ADD5FA', spot: '#F9D99A', ink: '#6D6D6F',
     photo: { src: '/img/ponce-photo-2026.webp', w: 646, h: 900 },
     nameImg: { src: '/img/ponce-name.webp', w: 1666, h: 686 },
