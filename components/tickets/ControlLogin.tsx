@@ -22,7 +22,7 @@ export default function ControlLogin() {
       <div className="lbl tk__k">Corazón a Corazón 2027</div>
       <h1 className="dsp tk__title" style={{ color: 'var(--cream)' }}>Control de entradas</h1>
       <form className="tk-form" onSubmit={submit}>
-        <input className="tk-input" name="pin" type="password" inputMode="numeric" autoComplete="current-password" placeholder="Clave del equipo" required aria-label="Clave del equipo" />
+        <input className="tk-input" name="pin" type="password" autoComplete="current-password" placeholder="Clave del equipo" required aria-label="Clave del equipo" />
         {error && <div className="tk-err" role="alert">{error}</div>}
         <button className="cta tk-btn" type="submit" disabled={busy}>Entrar</button>
       </form>
