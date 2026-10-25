@@ -34,7 +34,7 @@ export default function Hero() {
         <div className="nav__right">
           <a className="nl hide-m" href="#oradores">Oradores</a>
           <a className="nl hide-m" href="#info">Info</a>
-          <a className="nl nl--btn" href="/entradas">Entrada</a>
+          <a className="nl nl--btn hide-m" href="/entradas">Entrada</a>
           <Image src="/img/logo.png" alt={EVENT.ministry} width={314} height={212} className="nav__logo" priority />
         </div>
       </nav>
