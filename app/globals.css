@@ -132,7 +132,7 @@ a:hover { color: var(--cream); }
 .verse { margin: 0; font-family: var(--sans); font-weight: 700; font-size: clamp(26px, 4vw, 54px); line-height: 1.18; letter-spacing: -.02em; }
 .vw { display: inline-block; margin-right: .26em; }
 .verse-about { margin: 72px 0 0 auto; max-width: 720px; padding-left: 28px; border-left: 4px solid var(--coral); }
-.verse-about__p { margin: 0 0 22px; font-size: clamp(17px, 1.6vw, 21px); font-weight: 500; line-height: 1.65; color: var(--ink); }
+.verse-about__p { margin: 0 0 22px; font-size: clamp(17px, 1.6vw, 21px); font-weight: 500; line-height: 1.65; color: var(--ink); white-space: pre-line; }
 .verse-about__end { margin: 36px 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 18px; }
 .verse-about__big { font-size: clamp(36px, 4.4vw, 60px); color: var(--blue); }
 .verse-about__scr { font-size: clamp(40px, 4.6vw, 64px); color: var(--coral); transform: rotate(-4deg); }

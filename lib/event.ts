@@ -33,7 +33,10 @@ export const VERSE = {
   // Explicación del lema: un párrafo por elemento
   about: [
     // Aniversario: 35 años de la iglesia
-    'Hace 35 años, nuestros pastores Alfredo y Celina Dimiro fundaron la Iglesia Cristo La Solución en la ciudad de San Justo.  Hace 35 años comenzó una historia de fe, obediencia y fidelidad a Dios.  35 años siendo testigos de Su fidelidad.  35 años siendo formados por Su Palabra.  35 años orando juntos, creciendo juntos y edificando la iglesia local.  35 años compartiendo el Evangelio en nuestra ciudad, amando a las personas y alcanzando a los necesitados.  35 años creyendo, sirviendo y caminando juntos como familia de la fe.  35 años viendo la gloria de Dios en medio nuestro.  Y aunque celebramos con gratitud todo lo que Dios ha hecho, nuestra mirada sigue puesta en lo que viene. Porque todavía hay más por conocer de Su presencia, más por experimentar de Su poder y más por hacer para Su gloria.  35 años de fidelidad.  35 años de gloria.',
+    'Hace 35 años, nuestros pastores Alfredo y Celina Dimiro fundaron la Iglesia Cristo La Solución en la ciudad de San Justo. Así comenzó una historia de fe, obediencia y fidelidad a Dios.',
+    'Una historia en la que Su Palabra nos ha formado, la oración nos ha unido y el amor por las personas nos ha impulsado a compartir el Evangelio en nuestra ciudad y extender nuestras manos a quienes más lo necesitan. Hemos crecido juntos, edificado la iglesia local y caminado como familia de la fe, siendo testigos de la gloria de Dios en medio nuestro.',
+    'Y aunque hoy celebramos con gratitud todo lo que Dios ha hecho, nuestra mirada permanece puesta en lo que viene. Porque todavía hay más de Su presencia por conocer, más de Su poder por experimentar y mucho más por hacer para Su gloria.',
+    '35 años de fidelidad.\n35 años de gloria.',
     'Y todavía creemos que hay más.',
   ],
   closing: 'De corazón a corazón',
